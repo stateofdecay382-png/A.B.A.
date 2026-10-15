@@ -1,0 +1,6 @@
+{
+  "name": "ABA Kids · Universo de Aprendizaje",
+  "description": "Plataforma digital interactiva de aventuras, desafíos interactivos y aprendizaje autónomo para niños con matemáticas, lenguaje, biología, inglés y retos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

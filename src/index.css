@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #faf8ff;
+    color: #131b2e;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Tactile 3D push buttons */
+.btn-tactile-primary {
+  box-shadow: 0 4px 0 #1d4ed8;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-tactile-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1d4ed8;
+}
+
+.btn-tactile-cyan {
+  box-shadow: 0 4px 0 #0284c7;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-tactile-cyan:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0284c7;
+}
+
+.btn-tactile-card {
+  box-shadow: 0 5px 0 #e2e8f0;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+.btn-tactile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.08), 0 5px 0 #cbd5e1;
+}
+.btn-tactile-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #cbd5e1;
+}
+
+/* Soft glowing pulse for orbits and badges */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes spinOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: spinOrbit 45s linear infinite;
+}
